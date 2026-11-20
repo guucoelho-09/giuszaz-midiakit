@@ -1,0 +1,359 @@
+{
+  "hero": {
+    "intro": "Giu transforma o cotidiano em história: humor, viagem e vida a dois, do jeito que acontece.",
+    "foto": {
+      "src": "img/giu-hero.webp",
+      "tamanho": 100,
+      "x": 0,
+      "y": 0
+    },
+    "numeros": [
+      {
+        "valor": "104,2 mil",
+        "rotulo": "seguidores",
+        "icone": "users"
+      },
+      {
+        "valor": "4,2 mi",
+        "rotulo": "views no mês",
+        "icone": "eye"
+      },
+      {
+        "valor": "3,1 mi",
+        "rotulo": "contas alcançadas",
+        "icone": "reach"
+      }
+    ],
+    "etiquetas": [
+      "humor",
+      "viagem",
+      "casal sem filtro",
+      "lifestyle"
+    ]
+  },
+  "publis": {
+    "titulo": "Publi com cara de conteúdo",
+    "texto": "Minha comunidade me acompanha porque sente que está vivendo junto comigo. Cada parceria entra nessa conversa, sem quebrar o clima.",
+    "videos": [
+      {
+        "marca": "Zorea Store",
+        "video": "video/zorea.mp4",
+        "capa": "video/zorea.jpg"
+      },
+      {
+        "marca": "Amazon",
+        "video": "video/amazon.mp4",
+        "capa": "video/amazon.jpg"
+      },
+      {
+        "marca": "Cif",
+        "video": "video/cif.mp4",
+        "capa": "video/cif.jpg"
+      },
+      {
+        "marca": "Secret",
+        "video": "video/secret.mp4",
+        "capa": "video/secret.jpg"
+      },
+      {
+        "marca": "Dove",
+        "video": "video/dove.mp4",
+        "capa": "video/dove.jpg"
+      },
+      {
+        "marca": "Americanas",
+        "video": "video/americanas.mp4",
+        "capa": "video/americanas.jpg"
+      },
+      {
+        "marca": "TIM",
+        "video": "video/tim.mp4",
+        "capa": "video/tim.jpg"
+      },
+      {
+        "marca": "Shopee",
+        "video": "video/shopee.mp4",
+        "capa": "video/shopee.jpg"
+      }
+    ]
+  },
+  "numeros": {
+    "titulo": "Alcance real",
+    "fonte": "Instagram nos últimos 30 dias, com dados oficiais da Air atualizados em 20 de novembro de 2026.",
+    "views_mes": "4,2 mi",
+    "views_texto": "visualizações em posts no mês, a partir de uma base de 104,2 mil seguidores",
+    "foto": {
+      "src": "video/zorea.jpg",
+      "legenda": "Publi Zorea Store",
+      "tamanho": 100,
+      "x": 0,
+      "y": 0
+    },
+    "multiplicador": "30x",
+    "multiplicador_texto": "mais contas alcançadas que o número de seguidores",
+    "alcance": "3,1 mi",
+    "stories": "996,4 mil",
+    "publico": [
+      {
+        "valor": "50%",
+        "texto": "tem de 25 a 34 anos",
+        "barra": 50,
+        "icone": "age"
+      },
+      {
+        "valor": "50%",
+        "texto": "homens, e 38% mulheres",
+        "barra": 50,
+        "icone": "couple"
+      },
+      {
+        "valor": "75%",
+        "texto": "em São Paulo",
+        "barra": 75,
+        "icone": "pin"
+      },
+      {
+        "valor": "18%",
+        "texto": "no Rio de Janeiro",
+        "barra": 18,
+        "icone": "pin"
+      }
+    ]
+  },
+  "destaques": {
+    "titulo": "Destaques",
+    "texto": "Os Reels que mais performaram nos últimos 30 dias.",
+    "itens": [
+      {
+        "etiqueta": "Visit Zurich e Lindt Home of Chocolate, novembro de 2026",
+        "titulo": "Um sonho realizado, um reel",
+        "views": "1,8",
+        "unidade": "mi views",
+        "dados": [
+          {
+            "valor": "1,3 mi",
+            "legenda": "contas alcançadas"
+          },
+          {
+            "valor": "206,5 mil",
+            "legenda": "curtidas"
+          },
+          {
+            "valor": "11,3 mil",
+            "legenda": "compartilhamentos"
+          }
+        ],
+        "capa": "img/case-zurich.jpg",
+        "link": "https://www.instagram.com/reel/DfnlyuWI2Rt/",
+        "video": ""
+      },
+      {
+        "etiqueta": "Humor de casal, novembro de 2026",
+        "titulo": "Pov: seu marido tem TDAH",
+        "views": "1,2",
+        "unidade": "mi views",
+        "dados": [
+          {
+            "valor": "908 mil",
+            "legenda": "contas alcançadas"
+          },
+          {
+            "valor": "156 mil",
+            "legenda": "curtidas"
+          },
+          {
+            "valor": "15 mil",
+            "legenda": "compartilhamentos"
+          }
+        ],
+        "capa": "img/case-tdah.jpg",
+        "link": "https://www.instagram.com/reel/DfVqNrSoLBK/",
+        "video": ""
+      },
+      {
+        "etiqueta": "Vida a dois, novembro de 2026",
+        "titulo": "Marca quem tem que ir para um date assim",
+        "views": "229,9",
+        "unidade": "mil views",
+        "dados": [
+          {
+            "valor": "175,9 mil",
+            "legenda": "contas alcançadas"
+          },
+          {
+            "valor": "29,2 mil",
+            "legenda": "curtidas"
+          },
+          {
+            "valor": "9,1 mil",
+            "legenda": "compartilhamentos"
+          }
+        ],
+        "capa": "img/case-date.jpg",
+        "link": "https://www.instagram.com/reel/DfVb7mBINaX/",
+        "video": ""
+      },
+      {
+        "etiqueta": "Viagem pela Bélgica, outubro de 2026",
+        "titulo": "Cadê a galera que dava risada da minha cara?",
+        "views": "162,8",
+        "unidade": "mil views",
+        "dados": [
+          {
+            "valor": "119,1 mil",
+            "legenda": "contas alcançadas"
+          },
+          {
+            "valor": "3,4 mil",
+            "legenda": "curtidas"
+          },
+          {
+            "valor": "420",
+            "legenda": "compartilhamentos"
+          }
+        ],
+        "capa": "img/case-belgica.jpg",
+        "link": "https://www.instagram.com/reel/DezIZqgqmRL/",
+        "video": ""
+      }
+    ]
+  },
+  "marcas": {
+    "titulo": "Marcas parceiras",
+    "texto": "Marcas com quem a Giu já criou conteúdo.",
+    "logos": [
+      {
+        "nome": "Amazon",
+        "src": "img/logo-amazon.webp"
+      },
+      {
+        "nome": "TIM",
+        "src": "img/logo-tim.webp"
+      },
+      {
+        "nome": "Shopee",
+        "src": "img/logo-shopee.webp"
+      },
+      {
+        "nome": "Pier",
+        "src": "img/logo-pier.webp"
+      },
+      {
+        "nome": "Americanas",
+        "src": "img/logo-americanas.webp"
+      },
+      {
+        "nome": "Dove",
+        "src": "img/logo-dove.webp"
+      },
+      {
+        "nome": "Secret",
+        "src": "img/logo-secret.webp"
+      },
+      {
+        "nome": "Garnier",
+        "src": "img/logo-garnier.webp"
+      },
+      {
+        "nome": "L'Oréal Elseve",
+        "src": "img/logo-elseve.webp"
+      },
+      {
+        "nome": "Cif",
+        "src": "img/logo-cif.webp"
+      },
+      {
+        "nome": "Smart Fit",
+        "src": "img/logo-smartfit.webp"
+      },
+      {
+        "nome": "Growth Supplements",
+        "src": "img/logo-growth.webp"
+      },
+      {
+        "nome": "Zorea Store",
+        "src": "img/logo-zorea.webp"
+      },
+      {
+        "nome": "Maré Maria",
+        "src": "img/logo-mare.webp"
+      },
+      {
+        "nome": "Mimeria",
+        "src": "img/logo-mimeria.webp"
+      },
+      {
+        "nome": "Hi Hanggy",
+        "src": "img/logo-hihanggy.webp"
+      },
+      {
+        "nome": "Wap",
+        "src": "img/logo-wap.webp"
+      }
+    ]
+  },
+  "midia": {
+    "titulo": "Na mídia",
+    "texto": "Participações em podcasts e programas. Toque para assistir no trecho certo.",
+    "itens": [
+      {
+        "nome": "Podpah",
+        "tipo": "Podcast",
+        "src": "img/midia-podpah.webp",
+        "link": "https://www.youtube.com/live/w_eWmUgqHLU?t=4035"
+      },
+      {
+        "nome": "PodDelas",
+        "tipo": "Podcast",
+        "src": "img/midia-poddelas-1.webp",
+        "link": "https://youtu.be/_vT4QX_essA?t=1527"
+      },
+      {
+        "nome": "PodDelas",
+        "tipo": "Podcast",
+        "src": "img/midia-poddelas-2.webp",
+        "link": "https://youtu.be/TujhROD---4?t=2006"
+      },
+      {
+        "nome": "Julia Puzzuoli",
+        "tipo": "Entrevista",
+        "src": "img/midia-julia-puzzuoli.webp",
+        "link": "https://youtu.be/lu2CnuY3seo?t=463"
+      },
+      {
+        "nome": "Smart Fit",
+        "tipo": "Reel",
+        "src": "img/midia-smartfit.webp",
+        "link": "https://www.instagram.com/reel/DR-qMmZjjKk/"
+      }
+    ]
+  },
+  "contato": {
+    "titulo": "Bora criar junto?",
+    "texto": "Trabalho com combos de Reels e Stories e monto cada proposta junto com a marca, do briefing à entrega.",
+    "email": "szazgiulia@gmail.com",
+    "foto": {
+      "src": "img/giu-contact.webp",
+      "tamanho": 100,
+      "x": 0,
+      "y": 0
+    }
+  },
+  "redes": [
+    {
+      "nome": "Instagram",
+      "icone": "insta",
+      "link": "https://www.instagram.com/giuszaz"
+    },
+    {
+      "nome": "TikTok",
+      "icone": "tiktok",
+      "link": "https://www.tiktok.com/@giuszaz"
+    },
+    {
+      "nome": "YouTube",
+      "icone": "youtube",
+      "link": "https://www.youtube.com/@giuszaz"
+    }
+  ]
+}

@@ -1,0 +1,139 @@
+backend:
+  name: git-gateway
+  branch: main
+locale: pt
+media_folder: "img/uploads"
+public_folder: "img/uploads"
+
+collections:
+  - name: site
+    label: "Mídia kit"
+    editor: { preview: false }
+    files:
+      - name: conteudo
+        label: "Conteúdo da página"
+        file: "content/site.json"
+        fields:
+          - label: "Redes sociais"
+            name: redes
+            widget: list
+            fields:
+              - { label: "Rede", name: nome, widget: string }
+              - { label: "Ícone", name: icone, widget: select, options: [insta, tiktok, youtube] }
+              - { label: "Link", name: link, widget: string }
+          - label: "Capa"
+            name: hero
+            widget: object
+            fields:
+              - { label: "Texto de apresentação", name: intro, widget: text }
+              - { label: "Foto da Giu", name: foto, widget: object, fields: &foto [{ label: "Imagem", name: "src", widget: image }, { label: "Tamanho (%)", name: "tamanho", widget: number, value_type: int, min: 50, max: 200, default: 100, hint: "100 é o tamanho original" }, { label: "Mover na horizontal (px)", name: "x", widget: number, value_type: int, min: -400, max: 400, default: 0, hint: "Negativo vai para a esquerda" }, { label: "Mover na vertical (px)", name: "y", widget: number, value_type: int, min: -400, max: 400, default: 0, hint: "Negativo sobe" }] }
+              - label: "Números da capa"
+                name: numeros
+                widget: list
+                max: 3
+                fields:
+                  - { label: "Valor", name: valor, widget: string }
+                  - { label: "Legenda", name: rotulo, widget: string }
+                  - { label: "Ícone", name: icone, widget: select, options: [users, eye, reach, story, boost] }
+              - { label: "Etiquetas (até 4)", name: etiquetas, widget: list, max: 4 }
+          - label: "Publis em vídeo"
+            name: publis
+            widget: object
+            fields:
+              - { label: "Título", name: titulo, widget: string }
+              - { label: "Texto", name: texto, widget: text }
+              - label: "Vídeos"
+                name: videos
+                widget: list
+                fields:
+                  - { label: "Marca", name: marca, widget: string }
+                  - { label: "Vídeo (mp4, até 15 s)", name: video, widget: file }
+                  - { label: "Capa do vídeo", name: capa, widget: image }
+          - label: "Números"
+            name: numeros
+            widget: object
+            fields:
+              - { label: "Título", name: titulo, widget: string }
+              - { label: "Fonte dos dados", name: fonte, widget: string }
+              - { label: "Views no mês", name: views_mes, widget: string }
+              - { label: "Texto das views", name: views_texto, widget: text }
+              - label: "Foto do quadro"
+                name: foto
+                widget: object
+                fields:
+                  - { label: "Imagem", name: src, widget: image }
+                  - { label: "Legenda", name: legenda, widget: string }
+                  - { label: "Tamanho (%)", name: tamanho, widget: number, value_type: int, min: 50, max: 200, default: 100 }
+                  - { label: "Mover na horizontal (px)", name: x, widget: number, value_type: int, min: -400, max: 400, default: 0 }
+                  - { label: "Mover na vertical (px)", name: y, widget: number, value_type: int, min: -400, max: 400, default: 0 }
+              - { label: "Multiplicador", name: multiplicador, widget: string }
+              - { label: "Texto do multiplicador", name: multiplicador_texto, widget: string }
+              - { label: "Contas alcançadas", name: alcance, widget: string }
+              - { label: "Views em stories", name: stories, widget: string }
+              - label: "Público"
+                name: publico
+                widget: list
+                max: 4
+                fields:
+                  - { label: "Valor", name: valor, widget: string }
+                  - { label: "Texto", name: texto, widget: string }
+                  - { label: "Barra (0 a 100)", name: barra, widget: number, value_type: int, min: 0, max: 100 }
+                  - { label: "Ícone", name: icone, widget: select, options: [age, couple, pin, users] }
+          - label: "Destaques"
+            name: destaques
+            widget: object
+            fields:
+              - { label: "Título", name: titulo, widget: string }
+              - { label: "Texto", name: texto, widget: string }
+              - label: "Reels em destaque"
+                name: itens
+                widget: list
+                fields:
+                  - { label: "Etiqueta", name: etiqueta, widget: string }
+                  - { label: "Título", name: titulo, widget: string }
+                  - { label: "Número grande", name: views, widget: string, hint: "Ex.: 1,8" }
+                  - { label: "Unidade", name: unidade, widget: string, hint: "Ex.: mi views" }
+                  - label: "Dados"
+                    name: dados
+                    widget: list
+                    max: 3
+                    fields:
+                      - { label: "Valor", name: valor, widget: string }
+                      - { label: "Legenda", name: legenda, widget: string }
+                  - { label: "Vídeo (mp4, opcional)", name: video, widget: file, required: false }
+                  - { label: "Capa", name: capa, widget: image }
+                  - { label: "Link do Reel", name: link, widget: string }
+          - label: "Marcas parceiras"
+            name: marcas
+            widget: object
+            fields:
+              - { label: "Título", name: titulo, widget: string }
+              - { label: "Texto", name: texto, widget: string }
+              - label: "Logos"
+                name: logos
+                widget: list
+                fields:
+                  - { label: "Marca", name: nome, widget: string }
+                  - { label: "Logo (quadrado)", name: src, widget: image }
+          - label: "Na mídia"
+            name: midia
+            widget: object
+            fields:
+              - { label: "Título", name: titulo, widget: string }
+              - { label: "Texto", name: texto, widget: string }
+              - label: "Participações"
+                name: itens
+                widget: list
+                fields:
+                  - { label: "Nome", name: nome, widget: string }
+                  - { label: "Tipo", name: tipo, widget: string }
+                  - { label: "Foto", name: src, widget: image }
+                  - { label: "Link do vídeo", name: link, widget: string, hint: "YouTube com o minuto (ex.: https://youtu.be/ID?t=463) ou Reel do Instagram" }
+          - label: "Contato"
+            name: contato
+            widget: object
+            fields:
+              - { label: "Título", name: titulo, widget: string }
+              - { label: "Texto", name: texto, widget: text }
+              - { label: "E-mail", name: email, widget: string }
+              - { label: "Foto da Giu", name: foto, widget: object, fields: *foto }
