@@ -48,8 +48,8 @@
       '<h2 class="disp">'+esc(d.titulo)+'</h2>'+
       '<div class="n">'+esc(d.views)+'<small>'+esc(d.unidade)+'</small></div>'+
       '<div class="facts">'+d.dados.map(function(x){return '<div><b>'+esc(x.valor)+'</b><span>'+esc(x.legenda)+'</span></div>';}).join('')+'</div>'+
-      '</div><a class="phone" href="'+esc(d.link)+'" target="_blank" rel="noopener">'+(d.video?'<video src="'+esc(d.video)+'" poster="'+esc(d.capa)+'" muted loop playsinline preload="metadata" aria-label="Reel: '+esc(d.titulo)+'"></video>':'<img src="'+esc(d.capa)+'" alt="Capa do Reel: '+esc(d.titulo)+'" loading="lazy">')+
-      '<span><svg class="ic"><use href="#i-insta"/></svg>Ver no Instagram</span></a></div></article>';
+      '</div><div class="phone-wrap"><div class="phone">'+(d.video?'<video src="'+esc(d.video)+'" poster="'+esc(d.capa)+'" muted loop playsinline preload="metadata" aria-label="Reel: '+esc(d.titulo)+'"></video>':'<img src="'+esc(d.capa)+'" alt="Capa do Reel: '+esc(d.titulo)+'" loading="lazy">')+
+      '</div><a class="see" href="'+esc(d.link)+'" target="_blank" rel="noopener"><svg class="ic"><use href="#i-insta"/></svg>Ver no Instagram</a></div></div></article>';
   }).join('');
   $('dots').innerHTML = items.map(function(_,i){return '<button type="button" aria-label="Ir para o destaque '+(i+1)+'"></button>';}).join('');
   var sl = $('slides'), dots = $('dots').children;

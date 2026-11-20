@@ -143,9 +143,9 @@
             "legenda": "compartilhamentos"
           }
         ],
-        "capa": "img/case-zurich.jpg",
+        "capa": "video/destaque-zurich.jpg",
         "link": "https://www.instagram.com/reel/DfnlyuWI2Rt/",
-        "video": ""
+        "video": "video/destaque-zurich.mp4"
       },
       {
         "etiqueta": "Humor de casal, novembro de 2026",
@@ -166,9 +166,9 @@
             "legenda": "compartilhamentos"
           }
         ],
-        "capa": "img/case-tdah.jpg",
+        "capa": "video/destaque-tdah.jpg",
         "link": "https://www.instagram.com/reel/DfVqNrSoLBK/",
-        "video": ""
+        "video": "video/destaque-tdah.mp4"
       },
       {
         "etiqueta": "Vida a dois, novembro de 2026",
@@ -189,9 +189,9 @@
             "legenda": "compartilhamentos"
           }
         ],
-        "capa": "img/case-date.jpg",
+        "capa": "video/destaque-date.jpg",
         "link": "https://www.instagram.com/reel/DfVb7mBINaX/",
-        "video": ""
+        "video": "video/destaque-date.mp4"
       },
       {
         "etiqueta": "Viagem pela Bélgica, outubro de 2026",
@@ -212,9 +212,9 @@
             "legenda": "compartilhamentos"
           }
         ],
-        "capa": "img/case-belgica.jpg",
+        "capa": "video/destaque-belgica.jpg",
         "link": "https://www.instagram.com/reel/DezIZqgqmRL/",
-        "video": ""
+        "video": "video/destaque-belgica.mp4"
       }
     ]
   },
