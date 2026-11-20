@@ -29,14 +29,15 @@
       "viagem",
       "casal sem filtro",
       "lifestyle"
-    ]
+    ],
+    "atualizado": "Informações atualizadas em novembro de 2026"
   },
   "publis": {
     "titulo": "Publi com cara de conteúdo",
     "texto": "Minha comunidade me acompanha porque sente que está vivendo junto comigo. Cada parceria entra nessa conversa, sem quebrar o clima.",
     "videos": [
       {
-        "marca": "Zorea Store",
+        "marca": "Torres Store",
         "video": "video/zorea.mp4",
         "capa": "video/zorea.jpg"
       },
@@ -84,7 +85,7 @@
     "views_texto": "visualizações em posts no mês, a partir de uma base de 104,2 mil seguidores",
     "foto": {
       "src": "video/zorea.jpg",
-      "legenda": "Publi Zorea Store",
+      "legenda": "Publi Torres Store",
       "tamanho": 100,
       "x": 0,
       "y": 0
@@ -271,7 +272,7 @@
         "src": "img/logo-growth.webp"
       },
       {
-        "nome": "Zorea Store",
+        "nome": "Torres Store",
         "src": "img/logo-zorea.webp"
       },
       {

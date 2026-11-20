@@ -20,7 +20,8 @@
     return '<div><svg class="ic"><use href="#i-'+esc(n.icone)+'"/></svg><b>'+esc(n.valor)+'</b>'+esc(n.rotulo)+'</div>';
   }).join('');
   var stk = ['s1','s2 glass','s3','s4 glass'];
-  $('stickers').innerHTML = C.hero.etiquetas.slice(0,4).map(function(t,i){return '<span class="sticker '+stk[i]+'">'+esc(t)+'</span>';}).join('');
+  $('giu').insertAdjacentHTML('beforeend', '<div id="stk"></div>');
+  $('stk').innerHTML = C.hero.etiquetas.slice(0,4).map(function(t,i){return '<span class="sticker '+stk[i]+'">'+esc(t)+'</span>';}).join('');
 
   // publis em vídeo
   function reel(v){
@@ -79,20 +80,40 @@
     var t = parseInt((u.searchParams.get('t')||'0').replace(/s$/,''),10)||0, id='';
     if(/youtu\.be$/.test(u.hostname)) id=u.pathname.slice(1);
     else if(/youtube\.com$/.test(u.hostname)){ id=u.searchParams.get('v') || (u.pathname.match(/\/(live|shorts|embed)\/([^/?]+)/)||[])[2] || ''; }
-    if(id) return {src:'https://www.youtube-nocookie.com/embed/'+id+'?autoplay=1&rel=0&start='+t, vert:/shorts/.test(u.pathname)};
+    if(id) return {yt:id, start:t, vert:/shorts/.test(u.pathname)};
     var ig = u.pathname.match(/\/(reel|p)\/([^/]+)/);
     if(/instagram\.com$/.test(u.hostname) && ig) return {src:'https://www.instagram.com/'+ig[1]+'/'+ig[2]+'/embed/', vert:true};
     return null;
   }
   var dlg=$('player'), frame=$('frame'), lastBtn=null;
+  var ytReady=null;
+  function loadYT(){
+    if(ytReady) return ytReady;
+    ytReady=new Promise(function(res){
+      if(window.YT&&YT.Player) return res();
+      window.onYouTubeIframeAPIReady=res;
+      var sc=document.createElement('script'); sc.src='https://www.youtube.com/iframe_api'; document.head.appendChild(sc);
+    });
+    return ytReady;
+  }
+  loadYT();
+  function ytPlay(id,start){
+    loadYT().then(function(){
+      var p=new YT.Player('yt',{videoId:id,host:'https://www.youtube-nocookie.com',width:'100%',height:'100%',
+        playerVars:{autoplay:1,start:start,rel:0,playsinline:1,modestbranding:1},
+        events:{onReady:function(e){ e.target.playVideo();
+          setTimeout(function(){ try{ if(p.getPlayerState()!==1){ p.mute(); p.playVideo(); } }catch(_){} },900); }}});
+    });
+  }
   function closePlayer(){ frame.innerHTML=''; if(dlg.open) dlg.close(); if(lastBtn) lastBtn.focus(); }
   $('midia').addEventListener('click', function(e){
     var b=e.target.closest('button[data-i]'); if(!b) return;
     var m=C.midia.itens[+b.dataset.i], em=embed(m.link||'');
     if(!em){ if(m.link) window.open(m.link,'_blank','noopener'); return; }
     lastBtn=b; frame.className='frame'+(em.vert?' vert':'');
-    frame.innerHTML='<iframe src="'+esc(em.src)+'" title="Giu em '+esc(m.nome)+'" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>';
     dlg.showModal();
+    if(em.yt){ frame.innerHTML='<div id="yt"></div>'; ytPlay(em.yt, em.start); }
+    else frame.innerHTML='<iframe src="'+esc(em.src)+'" title="Giu em '+esc(m.nome)+'" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>';
   });
   $('closePlayer').onclick=closePlayer;
   dlg.addEventListener('click', function(e){ if(e.target===dlg) closePlayer(); });
@@ -111,10 +132,15 @@
   // título gigante ajustado à largura
   var wm=$('wm'), word=wm.parentNode;
   function fit(){
-    var target = innerWidth<=820 ? word.clientWidth-32 : innerWidth*0.58;
+    var target = innerWidth<=820 ? word.clientWidth-32 : innerWidth*0.94 - 40;
     wm.style.fontSize='100px'; wm.style.fontSize=(100*target/wm.getBoundingClientRect().width)+'px';
+    var hero=document.querySelector('.hero'), intro=document.querySelector('.hero .intro');
+    hero.style.minHeight = innerWidth<=820 ? '' : Math.max(innerHeight, word.offsetTop + wm.offsetHeight + intro.offsetHeight + 110)+'px';
+    // a foto começa abaixo do topo do nome, para o nome inteiro ficar legível e nada cobrir o rosto
+    var g=document.getElementById('giu');
+    if(innerWidth>820){ var H=hero.offsetHeight; g.style.height=Math.round(H - (word.offsetTop + wm.offsetHeight*0.6))+'px'; } else g.style.height='';
   }
-  fit(); if(document.fonts) document.fonts.ready.then(fit); addEventListener('resize',fit);
+  fit(); if(document.fonts){ document.fonts.load('900 100px "Big Shoulders Display"').then(fit); document.fonts.ready.then(fit); } addEventListener('load',fit); addEventListener('resize',fit);
   wm.querySelectorAll('span').forEach(function(s,i){s.style.transitionDelay=(i*0.05)+'s';});
   requestAnimationFrame(function(){setTimeout(function(){document.body.classList.add('ready');},60);});
 

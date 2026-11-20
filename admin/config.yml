@@ -26,6 +26,7 @@ collections:
             widget: object
             fields:
               - { label: "Texto de apresentação", name: intro, widget: text }
+              - { label: "Data da atualização", name: atualizado, widget: string }
               - { label: "Foto da Giu", name: foto, widget: object, fields: &foto [{ label: "Imagem", name: "src", widget: image }, { label: "Tamanho (%)", name: "tamanho", widget: number, value_type: int, min: 50, max: 200, default: 100, hint: "100 é o tamanho original" }, { label: "Mover na horizontal (px)", name: "x", widget: number, value_type: int, min: -400, max: 400, default: 0, hint: "Negativo vai para a esquerda" }, { label: "Mover na vertical (px)", name: "y", widget: number, value_type: int, min: -400, max: 400, default: 0, hint: "Negativo sobe" }] }
               - label: "Números da capa"
                 name: numeros
